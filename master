@@ -1,0 +1,31 @@
+# SwapUsingFunctions
+32nd program on c
+#include<stdio.h>
+void swap1(int*,int*);
+int swap2(int,int);
+int main()
+{
+int a,b;
+printf("Enter the first number \n");
+scanf("%d",&a);
+printf("Enter the second number \n");
+scanf("%d",&b);
+swap1(&a,&b);
+printf("The numbers swapped after using pointers are %d %d \n",a,b);
+swap2(a,b);
+printf("The numbers swapped without using pointers %d %d \n",a,b);
+}
+void swap1(int *a,int *b)
+{
+int c;
+c =*a;
+*a =*b;
+*b =c;
+}
+int swap2(int a,int b)
+{
+a=a+b;
+b=a-b;
+a=a-b;
+return 0;
+} 
